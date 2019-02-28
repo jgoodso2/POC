@@ -1,0 +1,26 @@
+<p *ngIf="imageDetails">
+  <img src="{{imageDetails.imageName}}" width="145" height="126" alt="Planets" usemap="#planetmap">
+  <map name="planetmap" >
+    <area shape="circle" *ngFor="let img of imageDetails.hotspots" coords="{{img.xCord}},{{img.yCord}},{{img.diameter}}" 
+    alt="Mercury" (click)="showModal(img)">
+  </map>
+</p>
+
+
+<div id ="myModal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" *ngIf="selectedHotspot">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+         {{selectedHotspot.markup.title}}
+        </div>
+        <div class="modal-body">
+            
+            <span [innerHTML]="selectedHotspot.markup.body"></span>
+        </div>
+        <div class="modal-footer">
+            {{selectedHotspot.markup.footer}}
+        </div>
+      </div>
+    </div>
+  </div>
+

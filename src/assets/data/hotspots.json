@@ -1,0 +1,21 @@
+{
+    "imageName": "assets/foo.png",
+    "hotspots": [
+        {
+            "hotspotId": "1",
+            "xCord": 90,
+            "yCord": 58,
+            "diameter" :3,
+            "markup": {},
+            "filename" : "modal1.json"
+        },
+        {
+            "hotspotId": "2",
+            "xCord": 124,
+            "yCord": 58,
+            "diameter" : 8,
+            "markup": {},
+            "filename" : "modal2.json"
+        }
+    ]
+}
